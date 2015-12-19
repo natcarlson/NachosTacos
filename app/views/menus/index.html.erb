@@ -1,0 +1,27 @@
+<h1>New Menu Item</h1>
+<h3>Currently logged in as: <%= current_manager.man_name %></h3>
+
+<%= button_to "Log Out", sessions_path, method: :delete %>
+
+<h2><a href="/parties">Tables</a></h2>
+
+
+<h4>Enter New Menu Item</h4>
+<%= form_for @menu do |f| %>
+  <%= f.label :item_name, 'Menu Item Name:' %>
+  <%= f.text_field :item_name %>
+  <%= f.label :item_class, 'Menu Item Class:' %>
+  <%= f.text_field :item_class %>
+  <%= f.label :item_price, 'Menu Item Price:' %>
+  <%= f.text_field :item_price %>
+  <%= f.submit %>
+<% end %>
+
+
+<ul>
+  <% @menus.each do |menu| %>
+    <li>
+      <%= menu.item_name %> <%= menu.item_price %> <%= button_to "Edit", menus_path(menu), method: :get %> <%= button_to "Remove", menus_path(menu), method: :delete%>
+    </li>
+  <% end %>
+</ul>

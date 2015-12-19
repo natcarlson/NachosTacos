@@ -1,0 +1,10 @@
+<h1>Welcome</h1>
+
+<a href="/log_ins">Enter Order</a>
+<a href="/managers">Manager</a>
+
+<%= form_tag sessions_path do %>
+  <%= text_field_tag :man_num %>
+  <%= password_field_tag :password %>
+  <%= submit_tag "Login" %>
+<% end %>

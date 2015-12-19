@@ -1,4 +1,35 @@
 Rails.application.routes.draw do
+
+
+
+resources :employees
+resources :log_ins
+resources :menus
+resources :mods
+resources :orders
+resources :parties
+resources :managers
+
+post '/sessions' => 'sessions#create'
+delete '/sessions' => 'sessions#destroy'
+
+post '/employees' => 'employees#create'
+delete '/employees' => 'employees#destroy'
+
+post '/menus' => 'menus#create'
+delete '/menus' => 'menus#destroy'
+
+post '/mods' => 'mods#create'
+delete '/mods' => 'mods#destroy'
+
+get 'log_in' => 'managers#log_in'
+
+root 'welcome#index'
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

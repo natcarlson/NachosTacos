@@ -1,0 +1,12 @@
+<h1>Admin</h1>
+<h3>Currently logged in as: <%= current_manager.man_name %></h3>
+
+<%= button_to "Log Out", sessions_path, method: :delete %>
+
+<h2><a href="/parties">Tables</a></h2>
+
+<%= button_to "Employee Center", employees_path, method: :get %>
+
+<%= button_to "Menu Center", menus_path, method: :get %>
+
+<%= button_to "Modification Center", mods_path, method: :get %>

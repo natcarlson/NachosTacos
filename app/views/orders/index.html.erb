@@ -1,0 +1,19 @@
+<h1>Order</h1>
+
+<a href="/parties">Back to Tables</a>
+
+<%= form_for @order do |f| %>
+  <%= f.collection_select(:menu_id, Menu.all, :id, :item_name) %>
+  <%= f.collection_select(:party_id, Party.all, :id, :item_name) %>
+  <%= f.submit %>
+<% end %>
+
+
+<ul>
+  <% @orders.each do |order| %>
+    <li>
+      <%= order.party.name %> wants
+      <%= order.menu.name %>
+    </li>
+  <% end %>
+</ul>

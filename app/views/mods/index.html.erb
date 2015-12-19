@@ -1,0 +1,27 @@
+<h1>New Menu Mods</h1>
+<h3>Currently logged in as: <%= current_manager.man_name %></h3>
+
+<%= button_to "Log Out", sessions_path, method: :delete %>
+
+<h2><a href="/parties">Tables</a></h2>
+
+
+<h4>Enter New Menu Modification</h4>
+<%= form_for @mod do |f| %>
+  <%= f.label :mod_name, 'Mod Item Name:' %>
+  <%= f.text_field :mod_name %>
+  <%= f.label :mod_class, 'Mod Item Class:' %>
+  <%= f.text_field :mod_class %>
+  <%= f.label :mod_price, 'Mod Item Price:' %>
+  <%= f.text_field :mod_price %>
+  <%= f.submit %>
+<% end %>
+
+
+<ul>
+  <% @mods.each do |mod| %>
+    <li>
+      <%= mod.mod_name %> <%= mod.mod_price %> <%= button_to "Edit", mods_path(mod), method: :get %> <%= button_to "Remove", mods_path(mod), method: :delete%>
+    </li>
+  <% end %>
+</ul>
