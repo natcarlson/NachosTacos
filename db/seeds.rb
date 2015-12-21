@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Manager.create(man_num: '100', man_name: 'nat', password: 'nat')
+Party.create(table_num: '1', last_name: 'Keitel')

@@ -19,6 +19,27 @@ body {
   background-color: lightyellow;
 }
 
- ul {
+ul {
    list-style: none;
+ }
+
+a {
+   text-decoration: none;
+ }
+
+ .tables {
+   top: 20px;
+ }
+
+.table-one {
+  border-width: 2px solid;
+  border-color: black
+}
+
+.table-head {
+  text-align: center;
+ }
+
+.table-options {
+  text-align: center;
  }

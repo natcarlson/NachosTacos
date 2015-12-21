@@ -24,6 +24,9 @@ delete '/mods' => 'mods#destroy'
 
 get 'log_in' => 'managers#log_in'
 
+get '/parties/:party_id/orders/new' => 'orders#new'
+#get '/parties/<%= party.id %>/orders/new' => 'orders#new'
+
 root 'welcome#index'
 
 

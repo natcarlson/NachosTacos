@@ -1,26 +1,182 @@
-<h1>Party!!!</h1>
+<div class="tables">
+
+<!--  <% @party.each do |party| %>
+  <a href="/parties/<%= party.id %>/orders/new"> Party <%= party.id %> </a>
+  <% end %> -->
+  <a href="/parties/new">New Party</a>
+  <br>
+  <% @party.each do |party|%>
+    Table: <%= party.table_num%>
+    ||
+    Last Name: <%= party.last_name%>
+    <br>
+    <a href="/parties/<%= party.id %>/orders/new">Add Order</a>
+    ||
+    <a href="#">View Check</a>
+    <br>
+    <br>
+
+  <% end%>
+
+<div class="row">
+  <div class="one-third column">
+    <div class="table-one">
+      <div class="row">
+        <div class="twelve columns">
+          <div class="table-head">
+            <h4>Table 1</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <div class="table-options">
+            <div class="add-order-button">
+              <h6><a href="/orders%>">Add Order</a></h6>
+            </div>
+          </div>
+        </div>
+        <div class="one-half column">
+          <div class="view-check-button">
+            <h6><a href="#">View Check</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="one-third column">
+    <div class="table-two">
+      <div class="row">
+        <div class="twelve columns">
+          <div class="table-head">
+            <h4>Table 2</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <div class="table-options">
+            <div class="add-order-button">
+              <h6><a href="/orders">Add Order</a></h6>
+            </div>
+          </div>
+        </div>
+        <div class="one-half column">
+          <div class="view-check-button">
+            <h6><a href="#">View Check</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="one-third column">
+    <div class="table-three">
+      <div class="row">
+        <div class="twelve columns">
+          <div class="table-head">
+            <h4>Table 3</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <div class="table-options">
+            <div class="add-order-button">
+              <h6><a href="/orders">Add Order</a></h6>
+            </div>
+          </div>
+        </div>
+        <div class="one-half column">
+          <div class="view-check-button">
+            <h6><a href="#">View Check</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-Table 1
-<a href="/orders">Add Order</a>
-<a href="#">View Check</a>
+<div class="row">
+  <div class="one-third column">
+    <div class="table-four">
+      <div class="row">
+        <div class="twelve columns">
+          <div class="table-head">
+            <h4>Table 4</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <div class="table-options">
+            <div class="add-order-button">
+              <h6><a href="/orders">Add Order</a></h6>
+            </div>
+          </div>
+        </div>
+        <div class="one-half column">
+          <div class="view-check-button">
+            <h6><a href="#">View Check</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-Table 2
-<a href="/orders">Add Order</a>
-<a href="#">View Check</a>
+  <div class="one-third column">
+    <div class="table-five">
+      <div class="row">
+        <div class="twelve columns">
+          <div class="table-head">
+            <h4>Table 5</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <div class="table-options">
+            <div class="add-order-button">
+              <h6><a href="/orders">Add Order</a></h6>
+            </div>
+          </div>
+        </div>
+        <div class="one-half column">
+          <div class="view-check-button">
+            <h6><a href="#">View Check</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-Table 3
-<a href="/orders">Add Order</a>
-<a href="#">View Check</a>
+  <div class="one-third column">
+    <div class="table-six">
+      <div class="row">
+        <div class="twelve columns">
+          <div class="table-head">
+            <h4>Table 6</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <div class="table-options">
+            <div class="add-order-button">
+              <h6><a href="/orders">Add Order</a></h6>
+            </div>
+          </div>
+        </div>
+        <div class="one-half column">
+          <div class="view-check-button">
+            <h6><a href="#">View Check</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-Table 4
-<a href="/orders">Add Order</a>
-<a href="#">view Check</a>
-
-Table 5
-<a href="/orders">Add Order</a>
-<a href="#">View Check</a>
-
-Table 6
-<a href="/orders">Add Order</a>
-<a href="#">View Check</a>
+</div>
