@@ -1,0 +1,15 @@
+<h1>Show Orders </h1>
+
+<a href="/parties">Tables</a>
+
+Table: <%= @party.table_num %>
+Last Name: <%= @party.last_name %>
+
+<br>
+
+<% @party.orders.each do |order| %>
+  <%= order.menu.item_name %>
+  <%= order.menu.item_price %>
+  <%= order.mod.mod_name %>
+  <%= order.mod.mod_price %>
+<% end %>

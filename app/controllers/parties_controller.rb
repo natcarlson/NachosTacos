@@ -7,12 +7,10 @@ class PartiesController < ApplicationController
 
   def new
     @party = Party.new
-    
   end
 
   def show
-    @party = Party.find(parties_params)
-
+    @party = Party.find(params[:id])
   end
 
   def create

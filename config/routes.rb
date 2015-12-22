@@ -26,6 +26,12 @@ get 'log_in' => 'managers#log_in'
 
 get '/parties/:party_id/orders/new' => 'orders#new'
 #get '/parties/<%= party.id %>/orders/new' => 'orders#new'
+get '/parties/:party_id/orders/show' => 'orders#show'
+
+get '/kitchen' => 'orders#track', as: :kitchen
+
+put "/orders/:id/is_complete" => "orders#is_complete"
+
 
 root 'welcome#index'
 

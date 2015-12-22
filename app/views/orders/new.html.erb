@@ -1,30 +1,10 @@
-<h1>New Order</h1>
+<h1>New Order for <%= @party.last_name %></h1>
 
 <a href="/parties">Back to Tables</a>
 
 <%= form_for @order do |f| %>
-  <%= f.collection_select(:party_id, Party.all, :id, :table_num) %>
   <%= f.collection_select(:menu_id, Menu.all, :id, :item_name) %>
   <%= f.collection_select(:mod_id, Mod.all, :id, :mod_name) %>
+  <%= f.hidden_field :party_id, :value => @party.id%>
   <%= f.submit %>
 <% end %>
-
-
-<ul>
-  <% @orders.each do |order| %>
-    <li>
-      <%= order.party.table_num %> wants
-      <%= order.menu.item_name %> with
-      <%= order.mod.mod_name %>
-
-    </li>
-  <% end %>
-</ul>
-
-<!--<% @parties.each do |party| %>
-<a href="/parties/<%= party.id %>/orders/new">Party party.id</a>
-<% end %>
-
-
-  @party = Party.find(parties_params[:party_id])
-    @party.order.create(orders_params) -->

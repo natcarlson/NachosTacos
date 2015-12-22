@@ -14,9 +14,9 @@
 <ul>
   <% @orders.each do |order| %>
     <li>
-      <%= order.party %> wants
+      <%= order.party.table_num %> wants
       <%= order.menu.item_name %> with
-      <%= order.mod %>
+      <%= order.mod.mod_name %>
       <%= button_to "Edit", order_path(order), method: :edit%>
       <%= button_to "Remove", order_path(order), method: :delete%>
 

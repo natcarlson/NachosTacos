@@ -7,4 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Manager.create(man_num: '100', man_name: 'nat', password: 'nat')
-Party.create(table_num: '1', last_name: 'Keitel')
+Menu.create(item_name: 'chicke burrito', item_class: 'burrito', item_price: '11.00')
+Mod.create(mod_name: 'guacamole', mod_class: 'topping', mod_price: '2.00')

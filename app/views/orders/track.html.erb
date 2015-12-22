@@ -1,0 +1,28 @@
+<h1>Order Tracker</h1>
+
+<a href="/parties">Tables</a>
+
+<ul>
+<% @allorders.each do |order| %>
+<li>  <%= order.menu.item_name %> </li>
+  <%= order.mod.mod_name %>
+  <% if order.complete %>
+    <%= order.complete %>
+      <% if order.complete == false %>
+        <form action="/orders/<%= order.id %>/is_complete" method="post">
+          <input type="hidden" name="_method" value="put">
+          <input type="submit" value="Complete"></input>
+        </form>
+      <% end %>
+  <% else %>
+  <form action="/orders/<%= order.id %>/is_complete" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="submit" value="Complete"></input>
+  </form>
+  <% end %>
+  <% if order.party %>
+  <%= order.party.table_num %>
+  <%= order.party.last_name %>
+  <% end %>
+  <% end %>
+</ul>

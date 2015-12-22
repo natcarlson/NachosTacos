@@ -1,0 +1,41 @@
+<h3>Guest Check</h3>
+
+<a href="/parties">Tables</a>
+
+Party ID: <%= @party.id %>
+<br>
+Party Name: <%= @party.last_name %>
+<br>
+Table: <%= @party.table_num %>
+
+
+<br>
+<br>
+<br>
+
+<% @party.orders.each do |order| %>
+  <%= order.menu.item_name %>
+  <%= order.menu.item_price %>
+  <br>
+  <%= order.mod.mod_name %>
+  <%= order.mod.mod_price %>
+  <br>
+<% end %>
+
+<br>
+
+Food Amount: <%= @check %>
+<br>
+Tax: <%= @tax %>
+<br>
+Total: <%= @total %>
+
+<br>
+<br>
+
+
+15% tip = <%= @tip15 %>
+|
+20% tip = <%= @tip20 %>
+|
+25% tip = <%= @tip25 %>
