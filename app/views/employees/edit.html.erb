@@ -1,0 +1,15 @@
+<h6>Edit</h6>
+
+<a href="/parties">Tables</a>
+<br>
+<a href="/managers">Manager Center</a>
+
+<%= form_for @employee do |f| %>
+  <%= f.label :emp_num, 'Employee Number:' %>
+  <%= f.text_field :emp_num %>
+  <%= f.label :emp_class, 'Employee Class:' %>
+  <%= f.text_field :emp_class %>
+  <%= f.label :emp_name, 'Employee Name:' %>
+  <%= f.text_field :emp_name %>
+  <%= f.submit %>
+<% end %>

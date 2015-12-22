@@ -1,0 +1,12 @@
+<h1>All Employees</h1>
+
+<a href="/parties">Tables</a>
+<br>
+<a href="/managers">Manager Center</a>
+
+<% @employees.each do |employee| %>
+  <%= employee.emp_num %>
+  <%= employee.emp_class %>
+  <%= employee.emp_name %>
+  <a href="/employees/<%= employee.id %>/edit/">Edit this employee</a>
+<% end %>

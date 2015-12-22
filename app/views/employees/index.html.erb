@@ -4,24 +4,38 @@
 <%= button_to "Log Out", sessions_path, method: :delete %>
 
 <a href="/parties">Tables</a>
+<br>
+<a href="/managers">Manager Center</a>
 
 
-<h4>Enter New Employee</h4>
-<%= form_for @employee do |f| %>
-  <%= f.label :emp_num, 'Employee Number:' %>
-  <%= f.text_field :emp_num %>
-  <%= f.label :emp_class, 'Employee Class:' %>
-  <%= f.text_field :emp_class %>
-  <%= f.label :emp_name, 'Employee Name:' %>
-  <%= f.text_field :emp_name %>
-  <%= f.submit %>
-<% end %>
+<div class="row">
+  <div class="six columns">
+    <h5>Enter New Employee</h5>
+    <%= form_for @employee do |f| %>
+      <%= f.label :emp_num, 'Employee Number:' %>
+      <%= f.text_field :emp_num %>
+      <%= f.label :emp_class, 'Employee Class:' %>
+      <%= f.text_field :emp_class %>
+      <%= f.label :emp_name, 'Employee Name:' %>
+      <%= f.text_field :emp_name %>
+      <br>
+      <%= f.submit %>
+    <% end %>
+  </div>
 
+  <div class="six columns">
+    <h5>All Employees</h5>
+    <ul>
+      <% @employees.each do |employee| %>
+        <li>
+          <%= employee.emp_name %>
+          <%= employee.emp_class %>
+          <%= employee.emp_num %>
+          <%= link_to "Edit", edit_employee_path(employee), method: :get%>
+          <%= link_to "Remove", employee_path(employee), method: :delete%>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 
-<ul>
-  <% @employees.each do |employee| %>
-    <li>
-      <%= employee.emp_name %> <%= button_to "Remove", employee_path(employee), method: :delete%>
-    </li>
-  <% end %>
-</ul>
+</div>

@@ -3,22 +3,24 @@
 <!--  <% @party.each do |party| %>
   <a href="/parties/<%= party.id %>/orders/new"> Party <%= party.id %> </a>
   <% end %> -->
-  <a href="/parties/new">New Party</a>
+  <h5><a href="/parties/new">New Party</a></h5>
+  <br>
+  <h5><a href="/kitchen">Order Status</a></h5>
   <br>
   <% @party.each do |party|%>
-    Table: <%= party.table_num%>
+    <h6>Table: <%= party.table_num%></h6>
     ||
-    Last Name: <%= party.last_name%>
+    <h6>Name: <%= party.last_name%></h6>
     <br>
-    <a href="/parties/<%= party.id %>/orders/new">Add Order</a>
+    <h6><a href="/parties/<%= party.id %>/orders/new">Add Order</a></h6>
     ||
-    <a href="/parties/<%= party.id %>/orders/show">View Check</a>
-    || <a href="/kitchen">Order Status</a>
+    <h6><a href="/parties/<%= party.id %>/orders/show">View Check</a></h6>
     <br>
     <br>
 
   <% end%>
 
+<!--
 <div class="row">
   <div class="one-third column">
     <div class="table-one">
@@ -179,5 +181,5 @@
     </div>
   </div>
 </div>
-
+-->
 </div>

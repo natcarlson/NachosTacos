@@ -14,6 +14,7 @@ post '/sessions' => 'sessions#create'
 delete '/sessions' => 'sessions#destroy'
 
 post '/employees' => 'employees#create'
+get '/employees/:id/edit' => 'employees#edit'
 delete '/employees' => 'employees#destroy'
 
 post '/menus' => 'menus#create'

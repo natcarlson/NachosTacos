@@ -2,6 +2,7 @@
 
 <a href="/parties">Back to Tables</a>
 
+
 <%= form_for @order do |f| %>
   <%= f.collection_select(:party_id, Party.all, :id, :table_num) %>
   <%= f.collection_select(:menu_id, Menu.all, :id, :item_name) %>
