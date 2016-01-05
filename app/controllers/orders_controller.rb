@@ -96,7 +96,7 @@ class OrdersController < ApplicationController
 
 
   def orders_params
-    params.require(:order).permit(:party_id, :menu_id, :mod_id, :mod_name, :table_num, :item_name, :complete)
+    params.require(:order).permit(:party_id, :menu_id, :mod_id, :mod_name, :table_num, :item_name, :complete, :comment)
   end
 
 

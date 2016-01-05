@@ -9,16 +9,15 @@
   <br>
   <% @party.each do |party|%>
     <h6>Table: <%= party.table_num%></h6>
-    ||
     <h6>Name: <%= party.last_name%></h6>
-    <br>
     <h6><a href="/parties/<%= party.id %>/orders/new">Add Order</a></h6>
-    ||
     <h6><a href="/parties/<%= party.id %>/orders/show">View Check</a></h6>
     <br>
     <br>
 
   <% end%>
+
+</div>
 
 <!--
 <div class="row">
@@ -182,4 +181,3 @@
   </div>
 </div>
 -->
-</div>
